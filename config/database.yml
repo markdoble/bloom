@@ -1,0 +1,31 @@
+development:
+  adapter: postgresql
+  encoding: utf8
+  database: venture
+  pool: 5
+  username: 
+  password:
+  host: localhost
+
+
+
+test: &TEST
+  adapter: postgresql
+  encoding: utf8
+  database: project_test
+  pool: 5
+  username: 
+  password:
+  host: localhost
+
+production:
+  adapter: postgresql
+  encoding: utf8
+  database: venture
+  pool: 5
+  username: 
+  password:
+
+cucumber:
+  <<: *TEST
+  

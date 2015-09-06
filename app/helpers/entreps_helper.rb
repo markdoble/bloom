@@ -1,0 +1,2 @@
+module EntrepsHelper
+end

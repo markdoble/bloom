@@ -1,0 +1,63 @@
+<div class="investor_background_image">
+<div class="container">
+	<br><br><br><br>
+	<%= image_tag('bloom_bitmap.png', height:'100px')%>
+	<br><br><br>
+<div class="investor_title col-lg-8 col-md-8 col-sm-12">
+<p>Investors registered with bloom receive email notifications regarding new investment opportunities in local start-up companies. Currently, we are only accepting Accredited Investors as defined by the Ontario Securities Regulation. </p>
+
+</div>
+
+
+   
+<div class="investor_form col-lg-8">
+
+<h3>Investor Details</h3>
+
+<%= form_for @investor do |f| %>
+<div class="row">
+  <div class="col-lg-6 col-md-6">
+  <%= f.label :investor_name, class: "sr-only", :required => true %>
+  <%= f.text_field :investor_name, class: "form-control ", style: "width:90%", placeholder: "Investor's Name" %>
+  </div>
+
+  <div class="col-lg-6 col-md-6">
+  <%= f.label :email, class: "sr-only", :required => true %>
+  <%= f.text_field :email, class: "form-control ", style: "width:90%", placeholder: "Email" %>
+  </div><br>
+  
+</div>
+<br>
+
+<div class="row">
+  <div class="col-lg-6 col-md-6">
+  <%= f.label :experience, class: "sr-only", :required => true %>
+  <%= f.text_field :experience, class: "form-control ", style: "width:90%", placeholder: "Investing Experience" %>
+  </div>
+
+  <div class="col-lg-6 col-md-6">
+  <%= f.label :location, class: "sr-only", :required => true %>
+  <%= f.text_field :location, class: "form-control ", style: "width:90%", placeholder: "Your Location" %>
+  </div><br>
+  
+</div>
+<br>
+
+
+
+<div class="invest_thesis">
+  <%= f.label :industry, class: "sr-only" %>
+  <%= f.text_area :industry, class: "form-control", :cols => 60, :rows=>10, style: "width:95%", placeholder: "Please provide a brief summary of your investment thesis" %><br/>
+</div>
+
+
+
+<div class="actions">
+  <%= f.submit "Submit", class: "btn btn-large btn-primary" %>
+</div>
+<br><br><br><br><br>
+<% end %>
+</div>
+</div>
+</div>
+
